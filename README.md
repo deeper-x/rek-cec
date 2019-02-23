@@ -5,4 +5,4 @@ _Problem:_
 Check http services availability, status codes, result.
 
 _Solution:_
-Reading a list of http services, result is a failure/success statuses.     
+Given a list of http services to check, return a failure/success status list.     

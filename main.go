@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/deeper-x/wserver/checker"
-	"github.com/deeper-x/wserver/utils"
+	"github.com/deeper-x/rek-cec/checker"
+	"github.com/deeper-x/rek-cec/utils"
 )
 
 func main() {

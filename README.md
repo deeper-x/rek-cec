@@ -7,7 +7,7 @@ Check http services availability, status codes, result.
 _Solution:_
 Given a list of http services to check, return a failure/success status list.     
 
-# Usage#
+# Usage #
 [ TODO ]
 
 # Service list configuration #

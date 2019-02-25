@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	configFile := utils.LoadConfigurationFile("./assets/configuration.json")
+	configFile := utils.LoadConfigurationFile("./settings/configuration.json")
 
 	urlFile := configFile.ServiceListFile
 	fileIn, err := os.Open(urlFile)

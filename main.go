@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	configFile := utils.LoadConfigurationData("./assets/configuration.json")
+	configFile := utils.LoadConfigurationFile("./assets/configuration.json")
 
 	urlFile := configFile.ServiceListFile
 	fileIn, err := os.Open(urlFile)
@@ -26,9 +26,9 @@ func main() {
 		log.Fatal("Error fetching file content!", err)
 	}
 
+	expectedStatus := configFile.ServiceAvailable
 	for scanner.Scan() {
-		isAvailable, url := checker.CallService(scanner.Text())
-		utils.WriteResponseOutput(isAvailable, url)
+		isAvailable, url := checker.CallService(scanner.Text(), expectedStatus)
+		utils.WriteResponseOutput(isAvailable, url, expectedStatus)
 	}
-
 }

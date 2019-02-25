@@ -8,20 +8,23 @@ import (
 
 // Config data
 type Config struct {
-	ServiceListFile string
+	ServiceListFile  string
+	ServiceAvailable int
 }
 
 // WriteResponseOutput write a response string
-func WriteResponseOutput(exitStatus bool, url string) {
+func WriteResponseOutput(exitStatus bool, url string, expectedStatus int) {
+	response := "# ERROR #"
+
 	if exitStatus {
-		fmt.Println(url, "success")
-	} else {
-		fmt.Println(url, "failure")
+		response = "WORKS!"
 	}
+
+	fmt.Printf("%v [%v]: %v\n", url, expectedStatus, response)
 }
 
-// LoadConfigurationData read configuration data
-func LoadConfigurationData(inFile string) Config {
+// LoadConfigurationFile read configuration data
+func LoadConfigurationFile(inFile string) Config {
 	var config Config
 	configFile, err := os.Open(inFile)
 

@@ -1,3 +1,4 @@
 {
-    "ServiceListFile":"./assets/to_check.txt"
+    "ServiceListFile":"./assets/to_check.txt",
+    "ServiceAvailable": 200
 }

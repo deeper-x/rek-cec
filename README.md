@@ -59,7 +59,7 @@ http://youtube.com [200]: WORKS!
 ```
 
 # Service list configuration #
-Service is a flat list of http services:
+List http services to scan:
 
 ```bash
 $ cat /home/${USER}/go/src/github.com/deeper-x/rek-cec/assets/to_check.txt

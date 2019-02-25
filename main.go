@@ -10,7 +10,10 @@ import (
 )
 
 func main() {
-	fileIn, err := os.Open("./assets/to_check.txt")
+	configFile := utils.LoadConfigurationData("./assets/configuration.json")
+
+	urlFile := configFile.ServiceListFile
+	fileIn, err := os.Open(urlFile)
 	if err != nil {
 		log.Fatal("Error opening file!", err)
 	}

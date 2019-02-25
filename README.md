@@ -42,7 +42,7 @@ $ ls
 
 Build & run:
 ```bash
-$ go build -o bin/rek-check # your preferred bin path
+$ go build -o bin/rek-check # Pass your preferred bin path
 $ ./bin/rek-cec 
 http://google.com [200]: WORKS!
 http://www.bbc.com [200]: WORKS!
@@ -52,23 +52,18 @@ http://youtube.com [200]: WORKS!
 Or install & run:
 ```bash
 $ go install 
-$ rek-cec 
+$ rek-cec # Assuming your env path stuff is well configured
 http://google.it [200]: WORKS!
 http://www.bbc.com [200]: WORKS!
 http://youtube.com [200]: WORKS!
-
 ```
-
-```bash
-$ ./
-```
-
-
-
-
-# Usage #
-[ TODO ]
 
 # Service list configuration #
-[ TODO ]
+Service is a flat list of http services:
 
+```bash
+$ cat /home/${USER}/go/src/github.com/deeper-x/rek-cec/assets/to_check.txt
+http://google.it
+http://www.bbc.com
+http://youtube.com
+```

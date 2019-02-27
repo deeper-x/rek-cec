@@ -12,7 +12,7 @@ Example: check if services are available [response: 200 OK]
 ```bash
 $ rek-cec [HTTP CODE - Default: 200]
 ```
-Given an input status code (optional), http services listed in "to_check.txt" are called, and responses are checked.
+Explanation: given an input status code (optional), http services listed in "to_check.txt" are called, and responses are checked.
 
 # Configuration, build, install #
 

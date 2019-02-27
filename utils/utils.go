@@ -20,7 +20,7 @@ func WriteResponseOutput(exitStatus bool, url string, expectedStatus int) {
 		response = "WORKS!"
 	}
 
-	fmt.Printf("%v [%v]: %v\n", url, expectedStatus, response)
+	fmt.Printf("%v [code %v]: %v\n", url, expectedStatus, response)
 }
 
 // LoadConfigurationFile read configuration data

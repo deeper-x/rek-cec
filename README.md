@@ -7,9 +7,12 @@ Check http services availability, status codes, result.
 _Solution:_
 Given a list of http services to check, return a failure/success status list.     
 
-# Description #
-[ TODO ]
-
+# Usage #
+Example: check if services are available [response: 200 OK]
+```bash
+$ rek-cec [HTTP CODE - Default: 200]
+```
+Given an input status code (optional), http services listed in "to_check.txt" are called, and responses are checked.
 
 # Configuration, build, install #
 

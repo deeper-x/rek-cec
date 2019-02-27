@@ -2,7 +2,7 @@
 http service availability checker
 
 # Usage #
-Example: check if services are available [response: 200 OK]
+Example: check if services are available (= response is 200 OK)
 ```bash
 $ rek-cec [HTTP CODE - Default: 200]
 ```

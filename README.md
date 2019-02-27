@@ -39,7 +39,7 @@ $ ls
 
 Build & run:
 ```bash
-$ go build -o bin/rek-check # Pass your preferred bin path
+$ go build -o bin/rek-cec # Pass your preferred bin path
 $ ./bin/rek-cec 
 http://google.com [200]: WORKS!
 http://www.bbc.com [200]: WORKS!

@@ -3,7 +3,9 @@ package utils
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
+	"strconv"
 )
 
 // Config data
@@ -38,4 +40,22 @@ func LoadConfigurationFile(inFile string) Config {
 	jsonParser.Decode(&config)
 
 	return config
+}
+
+// GetExpectedStatus check input parameter
+func GetExpectedStatus() int {
+	configFile := LoadConfigurationFile("./settings/configuration.json")
+	expectedStatus := configFile.ServiceAvailable
+
+	argsLen := len(os.Args)
+
+	if argsLen == 2 {
+		var err error
+		expectedStatus, err = strconv.Atoi(os.Args[1])
+		if err != nil {
+			log.Fatal("Error parameter: ", err)
+		}
+	}
+
+	return expectedStatus
 }

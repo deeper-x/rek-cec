@@ -4,27 +4,18 @@ import (
 	"bufio"
 	"log"
 	"os"
-	"strconv"
 
 	"github.com/deeper-x/rek-cec/checker"
 	"github.com/deeper-x/rek-cec/utils"
 )
 
 func main() {
+	expectedStatus := utils.GetExpectedStatus()
 	configFile := utils.LoadConfigurationFile("./settings/configuration.json")
-	expectedStatus := configFile.ServiceAvailable
-	argsLen := len(os.Args)
-
-	if argsLen == 2 {
-		var err error
-		expectedStatus, err = strconv.Atoi(os.Args[1])
-		if err != nil {
-			log.Fatal("Error parameter: ", err)
-		}
-	}
 
 	urlFile := configFile.ServiceListFile
 	fileIn, err := os.Open(urlFile)
+
 	if err != nil {
 		log.Fatal("Error opening file!", err)
 	}

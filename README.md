@@ -43,7 +43,7 @@ $ ls
 
 Build & run:
 ```bash
-$ go build # Pass your preferred bin path
+$ go build 
 $ ./rek-cec 
 http://google.com [200]: WORKS!
 http://www.bbc.com [200]: WORKS!

@@ -1,14 +1,14 @@
 ## rek-cec 
 http service availability checker
 
-## Usage #
+## Usage ##
 Example: check if services are available (= response is 200 OK)
 ```bash
 $ rek-cec [HTTP CODE - Default: 200]
 ```
 Explanation: given an input status code (optional), http services listed in "to_check.txt" are called, and responses are checked.
 
-## Configuration, build, install #
+## Configuration, build, install ##
 
 System/env stuff settings:
 ```bash
@@ -58,7 +58,8 @@ http://www.bbc.com [200]: WORKS!
 http://youtube.com [200]: WORKS!
 ```
 
-## Unit test #
+## Unit test ##
+```bash
 $ go test -v -cover ./...
 ?   	github.com/deeper-x/rek-cec	[no test files]
 === RUN   TestCallService
@@ -75,10 +76,10 @@ ok  	github.com/deeper-x/rek-cec/checker	2.255s	coverage: 85.7% of statements
 PASS
 coverage: 72.0% of statements
 ok  	github.com/deeper-x/rek-cec/utils	0.002s	coverage: 72.0% of statements
+```
 
 
-
-## Service list configuration #
+## Service list configuration ##
 List http services to scan:
 
 ```bash

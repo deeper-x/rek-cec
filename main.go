@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 
@@ -10,8 +11,15 @@ import (
 )
 
 func main() {
-	expectedStatus := utils.GetExpectedStatus()
-	configFile := utils.LoadConfigurationFile("./settings/configuration.json")
+	expectedStatus, err := utils.GetExpectedStatus()
+	if err != nil {
+		log.Println(err)
+	}
+
+	configFile, err := utils.LoadConfigurationFile("./settings/configuration.json")
+	if err != nil {
+		log.Println(err)
+	}
 
 	urlFile := configFile.ServiceListFile
 	fileIn, err := os.Open(urlFile)
@@ -29,6 +37,6 @@ func main() {
 
 	for scanner.Scan() {
 		isAvailable, url := checker.CallService(scanner.Text(), expectedStatus)
-		utils.WriteResponseOutput(isAvailable, url, expectedStatus)
+		fmt.Println(utils.WriteResponseOutput(isAvailable, url, expectedStatus))
 	}
 }

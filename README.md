@@ -12,18 +12,19 @@ Explanation: given an input status code (optional), http services listed in "to_
 
 System/env stuff settings:
 ```bash
-$ export GOPATH="/home/${USER}/go/
-$ export PATH=${PATH}:${GOPATH}/bin
+$ export GOPATH=${HOME}/go
+$ export GOBIN=${GOPATH}/bin
+$ export PATH=${PATH}:${GOBIN}
 ```
+
 Check it out:
 ```bash
 $ go version
 go version go1.13.3 linux/amd64
-$ export GOPATH=${HOME}/go
-$ export GOBIN=${GOPATH}/bin
-$ export PATH=${PATH}:${GOBIN}
-$ go env GOPATH
+
+$ go env 
 /home/<YOURUSER>/go
+...
 $ echo $PATH
 /a/long/sequence/:/of/paths/:/ending/with:/home/<YOURUSER>/go/bin
 ```

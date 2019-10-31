@@ -1,6 +1,8 @@
 ## rek-cec 
 http service availability checker
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07758efebf7e4a98a3b3264ada127f14)](https://www.codacy.com/manual/deeper-x/rek-cec?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=deeper-x/rek-cec&amp;utm_campaign=Badge_Grade)
+
 ## Usage ##
 Example: check if response is 200 - OK
 ```bash
